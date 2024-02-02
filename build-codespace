@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -euo pipefail
+shopt -s nullglob
+
+# Workaround for making use of github code spaces in a convinient way
+
+# Make sure required tools are installed
+sudo apt-get update -qq && sudo apt-get -yqq install git curl qemu-system-x86 qemu-system-arm qemu-efi-aarch64 qemu-user-static
+
+# We can't easily install podman, so we run with docker which is pre-installed
+./build --container-engine docker "$@"
