@@ -4,3 +4,4 @@ linux-image-$arch
 systemd
 systemd-boot
 systemd-resolved
+ca-certificates

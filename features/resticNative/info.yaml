@@ -1,0 +1,5 @@
+type: element
+features:
+  include:
+    - restic
+    - networking

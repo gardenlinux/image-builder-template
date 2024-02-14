@@ -1,0 +1,5 @@
+description: web
+type: element
+features:
+  include:
+    - base

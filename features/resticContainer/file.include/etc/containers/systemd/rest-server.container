@@ -1,0 +1,13 @@
+[Unit]
+Description=Restic REST Server
+After=local-fs.target
+
+[Container]
+Image=docker.io/restic/rest-server:latest
+Volume=/home/restic/backup:/data
+PublishPort=0.0.0.0:8000:8000
+Environment=DISABLE_AUTHENTICATION=dontDoThisAtHomeJustADemo
+
+[Install]
+# Start by default on boot
+WantedBy=multi-user.target default.target

@@ -1,0 +1,5 @@
+description: Networking while building the image
+type: element
+features:
+  include:
+    - base
